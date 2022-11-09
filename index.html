@@ -279,7 +279,11 @@
                 }
                 context.closePath();
                 // create the fill
-                context.fillStyle = '#fcf91c';
+                var my_gradient=ctx.createLinearGradient(0, 0, 170, 0);
+                my_gradient.addColorStop(0, "black");
+                my_gradient.addColorStop(0.5, "red");
+                my_gradient.addColorStop(1, "white");
+                ctx.fillStyle = my_gradient;
                 context.fill();
                 // create the image
                 var image = new Image();
